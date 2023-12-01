@@ -23,10 +23,10 @@ const Friend = ({ friendId, name, subtitle, userPicturePath}) => {
 
     const patchFriend = async () => {
 
-    const url = `http://localhost:3001/users/${_id}/${friendId}`;
+    const url = `https://social-app-backend-alpha.vercel.app/users/${_id}/${friendId}`;
     console.log("Fetching URL:", url); // This line logs the URL to the console
         const response = await fetch(
-            `http://localhost:3001/users/${_id}/${friendId}`,
+            `https://social-app-backend-alpha.vercel.app/users/${_id}/${friendId}`,
             {
                 method: "PATCH",
                 headers: {
