@@ -16,14 +16,14 @@ export const register = async(req, res) => {
         occupation
       }  = req.body;
 
-      const salt = await bcryptjs.genSalt();
-      const passwordHash = await bcryptjs.hash(password, salt);
+      //const salt = await bcryptjs.genSalt();
+      //const passwordHash = await bcryptjs.hash(password, salt);
 
       const newUser = new User({
         firstName,
         lastName,
         email,
-        password: passwordHash,
+        password,
         picturePath,
         friends,
         location,
@@ -45,7 +45,7 @@ export const login = async(req, res) => {
     const user = await User.findOne({email: email});
     if (!user) return res.status(400).json({msg: "User does not exist."});
 
-    const isMatch = await bcryptjs.compare(password, user.password);
+    const isMatch = await User.findOne({password: password});
     if (!isMatch) return res.status(400).json({msg: "Invalid credentials."});
 
     const token = jwt.sign({id: user._id}, process.env.JWT_SECRET);
