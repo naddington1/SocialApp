@@ -13,7 +13,7 @@ const LoginPage = () => {
         textAlign="center"
       >
         <Typography fontWeight="bold" fontSize="32px" color="primary">
-          Sociopedia
+          Sociali
         </Typography>
       </Box>
 
@@ -25,7 +25,10 @@ const LoginPage = () => {
         backgroundColor={theme.palette.background.alt}
       >
         <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
-          Welcome to Socipedia, the Social Media for Sociopaths!
+          Welcome to Sociali, a social app for anyone and everyone!
+          <p fontSize = "12px">NOTE: Due to the free verison of vercel web hosting, the register page does not work because image uploading is not supported with the free tier of vercel.
+            Please use this premade account to view the website! Email: test@gmail.com || Password: test
+          </p>
         </Typography>
         <Form />
       </Box>
