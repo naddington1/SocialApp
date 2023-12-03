@@ -26,10 +26,10 @@ const LoginPage = () => {
       >
         <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
           Welcome to Sociali, a social app for anyone and everyone!
-          <p fontSize = "12px">NOTE: Due to the free verison of vercel web hosting, the register page does not work because image uploading is not supported with the free tier of vercel.
+        </Typography>
+        <p fontSize = "16px">NOTE: The register page does not allow you to create a new user because image uploading is not supported with the free tier of vercel web hosting.
             Please use this premade account to view the website! Email: test@gmail.com || Password: test
           </p>
-        </Typography>
         <Form />
       </Box>
     </Box>
